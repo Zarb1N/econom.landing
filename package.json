@@ -1,0 +1,36 @@
+{
+  "name": "econom.landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Source code for landing of ecomonic institute of RSAU MTAA",
+  "author": {
+    "name": "zarbin",
+    "email": "zarbin2001@gmail.com"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~4.5.15",
+    "@vue/cli-plugin-typescript": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "@vue/compiler-sfc": "^3.0.0",
+    "typescript": "~4.1.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "_id": "econom.landing@1.0.0",
+  "license": "ISC",
+  "readme": "ERROR: No README data found!"
+}
