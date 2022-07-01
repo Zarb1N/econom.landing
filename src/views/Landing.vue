@@ -233,7 +233,7 @@ export default defineComponent({
   .header__close-btn {
     z-index: 101;
     display: block;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 20px;
     font-size: 32px;
