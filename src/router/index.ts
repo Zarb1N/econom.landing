@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/landing',
+    path: '',
     component: () => require('../views/Landing.vue')
   }
 ]
