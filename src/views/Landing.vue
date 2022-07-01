@@ -1,6 +1,13 @@
 <template>
   <div class="landing">
-    <div class="landing__header header">
+    <div 
+        class="header__close-btn"
+        @click="isHeader = !isHeader"
+      >{{isHeader ? '🗙' : '☰'}}</div>
+    <div 
+      class="landing__header header"
+      :class="isHeader ? 'landing__header--opened' : 'landing__header--closed'"
+    >
       <div class="header__content">
         <img 
           class="header__logo"
@@ -60,6 +67,7 @@ import Footer from '@/parts/landing/Footer.vue'
 
 export default defineComponent({
   data: () => ({
+    isHeader: true,
     navigationItems: [
       {
         name: 'О нас',
@@ -106,6 +114,13 @@ export default defineComponent({
   background: rgba(255, 255, 255, 0.41);
   backdrop-filter: blur(100px);
   z-index: 100;
+  transition: all .3s;
+}
+.landing__header--opened {
+  transform: translateY(0%);
+}
+.landing__header--closed {
+  transform: translateY(-100%);
 }
 .header {
   width: 100%;
@@ -113,6 +128,9 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header__close-btn {
+  display: none;
 }
 .header__content {
   width: 100%;
@@ -191,7 +209,34 @@ export default defineComponent({
 }
 @media (max-width: 500px) {
   .header {
-    display: none;
+    height: min-content;
+  }
+  .header__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 30px;
+  }
+  .header__logo {
+    height: 70px;
+  }
+  .header__navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+  }
+  .header__navigation-item--button {
+    grid-column: 1 / 3;
+  }
+  .header__close-btn {
+    z-index: 101;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 32px;
   }
 }
 </style>
