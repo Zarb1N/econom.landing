@@ -246,9 +246,11 @@ export default defineComponent({
   }),
   methods: {
     nextSlide() {
+      // @ts-ignore
       this.$refs.carousel.next()
     },
     prevSlide() {
+      // @ts-ignore
       this.$refs.carousel.prev()
     }
   },
