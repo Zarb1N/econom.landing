@@ -45,7 +45,22 @@ export default defineComponent({
     name: '',
     email: '',
     question: ''
-  })
+  }),
+  methods: {
+    async sendFormData() {
+      const res = await fetch('ссылка на сервер', {
+        method: 'POST',
+        headers: { 
+          'Content-type': 'application/json' 
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          question: this.question
+        })
+      }) 
+    }
+  }
 })
 </script>
 
