@@ -30,7 +30,10 @@
         placeholder="Задайте нам любой вопрос, который Вас интересует"
         v-model="question"
       ></textarea>
-      <div class="form__submit-btn landing__button--primary">Задать вопрос </div>
+      <div 
+        class="form__submit-btn landing__button--primary"
+        @click="sendFormData()"
+      >Задать вопрос </div>
     </div>
   </div>
 </template>
